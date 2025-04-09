@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&family=Pirata+One&display=swap");
+
+:root {
+  --color-red: #651910;
+  --color-beige: #887e69;
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-beige {
+  color: var(--color-beige);
+}
+
+.pirata-one {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gulzar {
+  font-family: "Gulzar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
