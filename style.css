@@ -3,6 +3,7 @@
 :root {
   --color-red: #651910;
   --color-beige: #887e69;
+  --color-dark-beige: #554f43;
 }
 
 .text-red {
@@ -11,6 +12,10 @@
 
 .text-beige {
   color: var(--color-beige);
+}
+
+.hover\:text-dark-beige:hover {
+  color: var(--color-dark-beige);
 }
 
 .pirata-one {
