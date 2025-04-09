@@ -69,9 +69,10 @@
           </h1>
         </div>
         <div
-          class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10"
+          class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 justify-items-center"
           data-aos="fade-left"
           data-aos-duration="500"
+          id="gallery"
         >
           <img
             src="./assets/border_image.jpg"
@@ -129,10 +130,62 @@
         </p>
       </footer>
     </div>
+    <div
+      id="overlay"
+      class="hidden fixed inset-0 w-full h-full bg-black/80 z-50 flex items-center justify-center"
+    >
+      <div
+        id="imageModalBox"
+        class="fixed w-full md:w-1/2 aspect-square flex items-center gap-5 px-5"
+      >
+        <div>
+          <svg
+            id="prevArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-circle-arrow-left-icon lucide-circle-arrow-left text-white hover:text-white/50 transition-all duration-500 ease-in-out cursor-pointer"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M16 12H8" />
+            <path d="m12 8-4 4 4 4" />
+          </svg>
+        </div>
+        <div class="w-full aspect-square bg-white">
+          <img id="imageModal" class="w-full h-full" src="" alt="" />
+        </div>
+        <div>
+          <svg
+            id="nextArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-circle-arrow-left-icon lucide-circle-arrow-left text-white hover:text-white/50 transition-all duration-500 ease-in-out cursor-pointer"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12h8" />
+            <path d="m12 16 4-4-4-4" />
+          </svg>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
     AOS.init({
       once: true,
     });
   </script>
+  <script src="script.js"></script>
 </html>
