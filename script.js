@@ -4,10 +4,12 @@ const overlay = document.getElementById("overlay");
 const imageModal = document.getElementById("imageModal");
 const prevArrow = document.getElementById("prevArrow");
 const nextArrow = document.getElementById("nextArrow");
+let activeImageIndex;
 
 imagesArray.forEach((image, index) => {
   image.addEventListener("click", function () {
     onClickImage(image.src);
+    activeImageIndex = index;
   });
 });
 
@@ -17,7 +19,29 @@ overlay.addEventListener("click", function (e) {
   }
 });
 
-prevArrow.addEventListener("click", function () {});
+prevArrow.addEventListener("click", function () {
+  if (activeImageIndex > 0) {
+    activeImageIndex--;
+    imageModal.src = imagesArray[activeImageIndex].src;
+    console.log(activeImageIndex);
+  } else if (activeImageIndex === 0) {
+    activeImageIndex = 5;
+    imageModal.src = imagesArray[activeImageIndex].src;
+    console.log(activeImageIndex);
+  }
+});
+
+nextArrow.addEventListener("click", function () {
+  if (activeImageIndex < imagesArray.length - 1) {
+    activeImageIndex++;
+    imageModal.src = imagesArray[activeImageIndex].src;
+    console.log(activeImageIndex);
+  } else if (activeImageIndex === imagesArray.length - 1) {
+    activeImageIndex = 0;
+    imageModal.src = imagesArray[activeImageIndex].src;
+    console.log(activeImageIndex);
+  }
+});
 
 function onClickImage(element) {
   imageModal.src = element;
