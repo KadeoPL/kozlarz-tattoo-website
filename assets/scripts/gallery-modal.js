@@ -15,7 +15,13 @@ imagesArray.forEach((image, index) => {
 
 overlay.addEventListener("click", function (e) {
   if (e.target === this) {
-    showOverlay(overlay);
+    toggleOverlay(overlay);
+  }
+});
+
+overlay.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" || e.code === "Escape") {
+    toggleOverlay(overlay);
   }
 });
 
@@ -23,11 +29,9 @@ prevArrow.addEventListener("click", function () {
   if (activeImageIndex > 0) {
     activeImageIndex--;
     imageModal.src = imagesArray[activeImageIndex].src;
-    console.log(activeImageIndex);
   } else if (activeImageIndex === 0) {
     activeImageIndex = 5;
     imageModal.src = imagesArray[activeImageIndex].src;
-    console.log(activeImageIndex);
   }
 });
 
@@ -35,20 +39,19 @@ nextArrow.addEventListener("click", function () {
   if (activeImageIndex < imagesArray.length - 1) {
     activeImageIndex++;
     imageModal.src = imagesArray[activeImageIndex].src;
-    console.log(activeImageIndex);
   } else if (activeImageIndex === imagesArray.length - 1) {
     activeImageIndex = 0;
     imageModal.src = imagesArray[activeImageIndex].src;
-    console.log(activeImageIndex);
   }
 });
 
 function onClickImage(element) {
   imageModal.src = element;
-  showOverlay(overlay);
+  toggleOverlay(overlay);
+  overlay.focus();
 }
 
-function showOverlay(element) {
+function toggleOverlay(element) {
   if (element.classList.contains("hidden")) {
     element.classList.remove("hidden");
   } else {

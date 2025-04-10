@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gulzar&family=Pirata+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Pirata+One&display=swap");
 
 :root {
   --color-red: #651910;
@@ -24,8 +24,8 @@
   font-style: normal;
 }
 
-.gulzar {
-  font-family: "Gulzar", serif;
+.cormorant {
+  font-family: "Cormorant", serif;
   font-weight: 400;
   font-style: normal;
 }
