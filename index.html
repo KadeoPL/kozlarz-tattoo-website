@@ -67,21 +67,27 @@
           >
             My artwork
           </h1>
-          <div class="mt-5 flex items-center justify-center gap-10">
+          <div class="mt-5 flex items-center justify-center gap-5 md:gap-10">
             <span
               role="button"
+              id="image-all"
+              value="all"
               class="bg-transparent border-0 outline-none p-0 m-0 text-beige cormorant text-lg uppercase cursor-pointer hover:text-dark-beige transition-all duration-500 ease-in-out align-middle"
             >
               All</span
             ><span class="text-beige text-lg"> / </span>
             <span
               role="button"
+              id="image-tattoo"
+              value="tattoo"
               class="bg-transparent border-0 outline-none p-0 m-0 text-beige cormorant text-lg uppercase cursor-pointer hover:text-dark-beige transition-all duration-500 ease-in-out align-middle"
             >
               Tattoo</span
             ><span class="text-beige text-lg"> / </span>
             <span
               role="button"
+              id="image-artwork"
+              value="artwork"
               class="bg-transparent border-0 outline-none p-0 m-0 text-beige cormorant text-lg uppercase cursor-pointer hover:text-dark-beige transition-all duration-500 ease-in-out align-middle"
             >
               Artwork</span
@@ -93,38 +99,7 @@
           data-aos="fade-left"
           data-aos-duration="500"
           id="gallery"
-        >
-          <img
-            src="./assets/tattoo-images/image_1.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-          <img
-            src="./assets/tattoo-images/image_2.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-          <img
-            src="./assets/tattoo-images/image_3.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-          <img
-            src="./assets/tattoo-images/image_4.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-          <img
-            src="./assets/tattoo-images/image_5.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-          <img
-            src="./assets/tattoo-images/image_6.jpg"
-            alt=""
-            class="hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-2xl"
-          />
-        </div>
+        ></div>
       </section>
       <section>
         <div class="w-full text-center">
@@ -208,5 +183,7 @@
       once: true,
     });
   </script>
+  <script src="./assets/scripts/render-gallery.js"></script>
   <script src="./assets/scripts/gallery-modal.js"></script>
+  <script src="./assets/scripts/filter-gallery.js"></script>
 </html>
