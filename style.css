@@ -6,6 +6,13 @@
   --color-dark-beige: #554f43;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .text-red {
   color: var(--color-red);
 }
